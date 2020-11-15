@@ -1,0 +1,16 @@
+@import "../../styles/vars.scss";
+
+.NoAccess {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &__Text {
+    margin-top: 38px;
+    font-family: $Roboto-ff;
+    font-size: 15px;
+    text-align: center;
+    color: #c4c4c4;
+  }
+}

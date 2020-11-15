@@ -1,0 +1,21 @@
+@import "../../../styles/vars.scss";
+
+.SettingsMain {
+  &__Wrap {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__SubTitle {
+    font-family: $Cera-ff;
+    font-size: 18px;
+    font-weight: bold;
+    color: $color-text;
+    margin-bottom: 20px;
+  }
+
+  &__Social {
+    margin: 40px 0 30px;
+  }
+}

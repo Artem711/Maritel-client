@@ -1,0 +1,45 @@
+@import "../../../styles/vars.scss";
+
+.EditingPrices {
+  margin-top: 20px;
+  width: $input-width;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  
+
+  &__Input {
+    height: 100%;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background: $color-background;
+    border: 1px solid $color-sys-gray;
+    box-sizing: border-box;
+    border-radius: $border-radius-default;
+    padding: 0 16px;
+    transition: all 0.3s;
+    font-size: $fz_15;
+
+    &::placeholder {
+      color: $color-main-gray;
+    }
+
+    &:focus {
+      border: 1px solid $color-client;
+    }
+
+    &--error {
+      border: 1px solid $color-error;
+    }
+
+    &--success {
+      border: 1px solid $color-success;
+    }
+  }
+
+  &__Label { 
+    display: block;
+    width: 308px;
+  }
+}

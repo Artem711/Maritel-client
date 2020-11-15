@@ -1,0 +1,205 @@
+@import "../../../../../styles/vars.scss";
+
+.SettingsCategoryNew {
+  &__Wrap {
+    margin-top: 35px;
+  }
+
+  &__Form {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: space-between;
+  }
+
+  &__Input {
+    width: $input-width;
+    height: 40px;
+    background: $color-background;
+    border: 1px solid $color-sys-gray;
+    box-sizing: border-box;
+    border-radius: $border-radius-default;
+    outline: 0;
+    font-size: $fz_15;
+    color: $color-text;
+    padding-left: 16px;
+    margin-right: 16px;
+    transition: all 0.3s;
+
+    &::placeholder {
+      color: $color-main-gray;
+    }
+
+    &:focus {
+      border: 1px solid $color-primary;
+    }
+  }
+
+  &__Save {
+    background-color: $color-primary;
+    outline: 0;
+    border: 0;
+    border-radius: $border-radius-default;
+    font-size: $fz_15;
+    color: #fff;
+    font-family: $Roboto-ff;
+    padding: 0 29px;
+    box-sizing: border-box;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: no-drop;
+    }
+
+    cursor: pointer;
+  }
+
+  &__RemoveCateg {
+    position: fixed;
+    z-index: 20;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 386px;
+    height: 222px;
+
+    background: $color-background;
+    border-radius: $border-radius-default;
+    padding: 45px 40px;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__RemoveBtnWrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__Btn {
+    width: 145px;
+    height: 49px;
+    background: $color-error;
+    border-radius: $border-radius-default;
+    font-family: $Roboto-ff;
+    font-size: $fz_15;
+    text-align: center;
+    color: $color-background;
+    border: 0;
+    outline: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #cc251c;
+    }
+  }
+
+  &__Cancel {
+    background: $color-sys-gray;
+    color: $color-text-light;
+
+    &:hover {
+      background-color: #f3f3f5;
+    }
+  }
+
+  &__RemoveText {
+    font-family: $Cera-ff;
+    font-weight: bold;
+    font-size: 23px;
+    text-align: center;
+    color: $color-text;
+  }
+
+  &__SubTitle {
+    font-family: $Cera-ff;
+    font-weight: bold;
+    font-size: 18px;
+    color: $color-text;
+  }
+
+  &__SettingsWrap {
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__Products {
+    display: grid;
+    grid-template-columns: repeat(2, 550px);
+    margin-top: 24px;
+    grid-column-gap: 17px;
+    grid-row-gap: 20px;
+
+    &--notAvailable {
+      grid-template-columns: 550px;
+      justify-content: center;
+    }
+  }
+
+  &__ButtonsWrap {
+    height: 40px;
+    display: flex;
+  }
+
+  &__Button {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+  }
+
+  &__Unsave {
+    background-color: #fafafa;
+    border: 0;
+    outline: 0;
+    margin-left: 43px;
+    color: $color-error;
+    font-size: $fz_15;
+  }
+
+  &__ButtonImg {
+    margin-right: 10px;
+  }
+
+  &__NotAvailable {
+    text-align: center;
+    color: $color-text-light;
+  }
+
+  &__Filter {
+    position: absolute;
+    font-family: $Roboto-ff;
+    width: 100%;
+    height: 50px;
+    background: $color-background;
+    border: 1px solid $color-sys-gray;
+    box-sizing: border-box;
+    border-radius: $border-radius-default;
+    outline: 0;
+    background-image: url(../../../../../images/inpSearch.svg);
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position-x: 24px;
+    background-position-y: 16px;
+    padding-left: 58px;
+    font-size: $fz_15;
+    top: 46px;
+    transition: all 0.3s;
+    &::placeholder {
+      color: $color-main-gray;
+    }
+
+    &:focus {
+      border: 1px solid $color-primary;
+    }
+  }
+}
+
+.SettingsCategoryNew__ProductItem:hover .SettingsCategoryNew__ProductTitle {
+  color: $color-primary;
+}

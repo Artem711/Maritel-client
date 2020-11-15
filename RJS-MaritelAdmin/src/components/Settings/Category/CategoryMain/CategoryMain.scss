@@ -1,0 +1,66 @@
+@import "../../../../styles/vars.scss";
+
+.CategoryMain {
+  &__Wrap {
+    margin-top: 56px;
+    position: relative;
+    display: flex;
+  }
+
+  &__List {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4, 266px);
+    grid-column-gap: 18px;
+    grid-row-gap: 20px;
+  }
+
+  &__Link {
+    display: flex;
+    text-decoration: none;
+    width: 266px;
+    height: 62px;
+    background: $color-sys-gray;
+    border-radius: $border-radius-default;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    font-family: $Cera-ff;
+    font-size: 18px;
+    color: $color-text;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &--spec {
+      border: 1px solid $color-main-gray;
+      box-sizing: border-box;
+    }
+  }
+
+  &__AddMore {
+    display: flex;
+    align-items: center;
+    height: 62px;
+    text-decoration: none;
+    justify-content: center;
+  }
+
+  &__AddImg {
+    width: 10px;
+    height: 10px;
+    margin-right: 3px;
+  }
+
+  &__AddText {
+    color: $color-primary;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: $Cera-ff;
+  }
+
+  &__Item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

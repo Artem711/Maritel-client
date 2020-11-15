@@ -1,0 +1,165 @@
+@import "../../../../styles/vars.scss";
+
+.SettingsCateg {
+  &__Wrap {
+    margin-top: 35px;
+  }
+
+  &__List {
+    margin-top: 20px;
+    list-style: none;
+  }
+
+  &__Img,
+  &__ImgTrash {
+    width: 15px;
+    height: 15px;
+  }
+
+  &__ImgWrap {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $color-sys-gray;
+      border-radius: 4px;
+    }
+
+    &--dis {
+      cursor: no-drop;
+
+      &:hover {
+        background-color: #fafafa;
+      }
+    }
+  }
+
+  &__EditWrap {
+    margin-bottom: 20px;
+  }
+
+  &__Item {
+    display: flex;
+  }
+
+  &__Settings {
+    margin-left: 16px;
+    height: 40px;
+    width: 101px;
+    padding: 0 8px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__AddSub {
+    margin-left: 60px;
+    width: 455px;
+    background: $color-background;
+    border: 1px solid $color-sys-gray;
+    box-sizing: border-box;
+    border-radius: $border-radius-default;
+    height: 40px;
+    margin-bottom: 20px;
+    outline: none;
+    padding-left: 16px;
+    box-sizing: border-box;
+    font-size: $fz_15;
+    color: $color-text;
+    transition: all 0.3s;
+
+    &::placeholder {
+      color: $color-main-gray;
+    }
+
+    &:focus {
+      border: 1px solid $color-primary;
+    }
+  }
+
+  &__AddSubWrap {
+    display: flex;
+  }
+
+  &__SubList {
+    padding-left: 60px;
+    list-style: none;
+  }
+
+  &__ImgTrash--dis {
+    opacity: 0.3;
+    cursor: no-drop;
+  }
+
+  &__SubItem {
+    width: 455px;
+    height: 40px;
+    background: $color-sys-gray;
+    border: 1px solid $color-sys-gray;
+    box-sizing: border-box;
+    border-radius: $border-radius-default;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 26px;
+      border-left: 1px solid $color-main-gray;
+      border-bottom: 1px solid $color-main-gray;
+      top: -6px;
+      left: -30px;
+    }
+  }
+
+  &__SubListWrap {
+    display: flex;
+  }
+
+  &__EditSub {
+    width: 455px;
+    box-sizing: border-box;
+    background: $color-background;
+    border: 1px solid $color-sys-gray;
+    box-sizing: border-box;
+    border-radius: $border-radius-default;
+    height: 40px;
+    outline: 0;
+    margin-bottom: 20px;
+    padding-left: 16px;
+    transition: all 0.3s;
+    font-size: $fz_15;
+
+    &:focus {
+      border: 1px solid $color-primary;
+    }
+  }
+
+  &__SubWrapper {
+    display: flex;
+    height: 40px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+
+  &__SubSettings {
+    margin-left: 84px;
+    box-sizing: border-box;
+  }
+}
+
+.SettingsCateg__ImgWrap:hover > .SettingsHint__Hint {
+  opacity: 1;
+  visibility: visible;
+}

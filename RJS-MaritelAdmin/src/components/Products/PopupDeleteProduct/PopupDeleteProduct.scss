@@ -1,0 +1,68 @@
+@import "../../../styles/vars.scss";
+
+.Delete {
+  position: fixed;
+  width: 386px;
+  height: 222px;
+  background-color: $color-background;
+  z-index: 21;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: $border-radius-default;
+  padding: 45px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__Text {
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 26px;
+    color: $color-text;
+  }
+
+  &__Buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__Button {
+    width: 145px;
+    height: 50px;
+    border-radius: $border-radius-default;
+    border: 0;
+    outline: 0;
+    font-size: $fz_15;
+    color: $color-background;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &--delete {
+      background: $color-error;
+
+      &:hover {
+        background-color: #cc251c;
+      }
+    }
+
+    &--cancel {
+      background-color: $color-sys-gray;
+      color: $color-text-light;
+
+      &:hover {
+        background-color: #f5f3f3;
+      }
+    }
+
+    &--link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+  }
+}

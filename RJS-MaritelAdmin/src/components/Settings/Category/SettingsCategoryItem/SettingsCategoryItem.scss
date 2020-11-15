@@ -1,0 +1,32 @@
+@import "../../../../styles/vars.scss";
+
+.SettingsCategoryItem {
+  &__Item {
+    width: 515px;
+    height: 40px;
+    background: $color-sys-gray;
+    border: 1px solid $color-sys-gray;
+    box-sizing: border-box;
+    border-radius: $border-radius-default;
+    margin-bottom: 20px;
+    display: flex;
+    padding: 0 16px;
+    align-items: center;
+    justify-content: space-between;
+    color: $color-text;
+  }
+
+  &__Img {
+    width: 15px;
+    height: 15px;
+  }
+
+  &__ImgWrap {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}

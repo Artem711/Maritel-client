@@ -1,0 +1,145 @@
+@import "../../../styles/vars.scss";
+
+.EditingSelect {
+  margin-top: 20px;
+  height: 40px;
+  &--after {
+    cursor: pointer;
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+  }
+
+  &__Main {
+    width: $input-width;
+    height: 40px;
+    border: 1px solid $color-sys-gray;
+    box-sizing: border-box;
+    border-radius: $border-radius-default;
+    padding: 11px 16px;
+    background-color: $color-background;
+    font-family: $Roboto-ff;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s;
+
+    &--open {
+      border-radius: 10px 10px 0 0;
+      border-bottom: 1px solid $color-background;
+    }
+
+    &--success {
+      border: 1px solid $color-success;
+    }
+
+    &--error {
+      border: 1px solid $color-error;
+    }
+  }
+
+  &__MainText {
+    height: 18px;
+    font-size: $fz_15;
+
+    &--default {
+      color: $color-text-light;
+      font-size: $fz_15;
+    }
+  }
+
+  &__Arrow {
+    transition: all 0.3s;
+    &--down {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__List {
+    width: $input-width;
+    list-style-type: none;
+    background-color: $color-background;
+    border: 1px solid $color-sys-gray;
+    border-top: 1px solid $color-background;
+    transform: translateY(-30px);
+    box-sizing: border-box;
+    border-radius: 0 0 10px 10px;
+    padding-bottom: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s;
+    z-index: -1;
+
+    &--open {
+      position: absolute;
+      z-index: 16;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(-3px);
+    }
+  }
+
+  &__Item {
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $color-sys-gray;
+    }
+
+    &--choosen {
+      background-color: $color-sys-gray;
+
+      &:hover {
+        background-color: $color-sys-gray;
+      }
+    }
+  }
+
+  &__OptionList {
+    list-style-type: none;
+  }
+
+  &__ItemText {
+    padding-left: 16px;
+    box-sizing: border-box;
+  }
+
+  &__OptionItem {
+    padding-left: 40px;
+    box-sizing: border-box;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+
+    &:hover {
+      background-color: $color-sys-gray;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 12px;
+      height: 12px;
+      border-left: 1px solid $color-main-gray;
+      border-bottom: 1px solid $color-main-gray;
+      box-sizing: border-box;
+      top: 4px;
+      left: 24px;
+    }
+
+    &--choosen {
+      background-color: $color-sys-gray;
+    }
+  }
+}

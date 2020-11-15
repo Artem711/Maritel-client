@@ -1,0 +1,151 @@
+@import "../../../../styles/vars.scss";
+
+.SettingsPromo {
+  &__Wrap {
+    margin-top: 35px;
+  }
+
+  &__Form {
+    display: flex;
+  }
+
+  &__Inp,
+  &__DiscountInp {
+    width: 235px;
+    height: 40px;
+    background: $color-background;
+    border: 1px solid $color-sys-gray;
+    box-sizing: border-box;
+    border-radius: $border-radius-default;
+    padding-left: 16px;
+    outline: 0;
+    font-size: $fz_15;
+    color: $color-text;
+    transition: all 0.3s;
+
+    &::placeholder {
+      color: $color-main-gray;
+    }
+
+    &:focus {
+      border: 1px solid $color-primary;
+    }
+  }
+
+  &__Discount {
+    margin-left: 16px;
+    display: flex;
+  }
+
+  &__Span {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid $color-text-light;
+    border-radius: 50%;
+    box-sizing: border-box;
+    margin-right: 8px;
+
+    &--active {
+      border: 5px solid $color-primary;
+    }
+  }
+
+  &__Label {
+    display: flex;
+    align-items: center;
+    &:last-child {
+      margin-left: 20px;
+    }
+  }
+
+  &__DiscountInp {
+    width: 101px;
+    height: 40px;
+    text-align: center;
+    padding: 0;
+    background-color: $color-sys-gray;
+    transition: all 0.3s;
+
+    &--active {
+      background: $color-background;
+    }
+  }
+
+  &__Add {
+    width: 101px;
+    height: 40px;
+
+    background: $color-primary;
+    border-radius: $border-radius-default;
+    margin-left: 16px;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: $fz_15;
+    font-family: $Roboto-ff;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $color-client;
+    }
+  }
+
+  &__List {
+    margin-top: 20px;
+    list-style-type: none;
+  }
+
+  &__Item {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__Name {
+    width: 235px;
+    height: 40px;
+    background: $color-sys-gray;
+    border: 1px solid $color-sys-gray;
+    box-sizing: border-box;
+    border-radius: $border-radius-default;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    box-sizing: border-box;
+    font-size: $fz_15;
+    color: $color-text;
+  }
+
+  &__Percent,
+  &__Grn {
+    width: 101px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 39px;
+  }
+
+  &__Grn {
+    margin-left: 43px;
+  }
+
+  &__ImgWrap {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 24px;
+    border-radius: 4px;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $color-sys-gray;
+    }
+  }
+}

@@ -1,0 +1,262 @@
+@import "../../../styles/vars.scss";
+
+.UploadFile {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &__Input {
+    display: none;
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: no-drop;
+    }
+  }
+
+  &__Wrap {
+    width: $input-width;
+    margin-top: 20px;
+    position: relative;
+  }
+
+  &__Photo {
+    width: 108px;
+    height: 135px;
+    border-radius: $border-radius-default;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__Stub {
+    width: 108px;
+    height: 135px;
+    margin-top: 20px;
+    font-size: 16px;
+    white-space: normal;
+    background-color: #eeeeeea5;
+    border-radius: $border-radius-default;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-text-light;
+    z-index: -1;
+  }
+
+  &__Button {
+    width: 160px;
+    height: 40px;
+    font-size: $fz_15;
+    color: $color-text-light;
+    background-color: $color-sys-gray;
+    border-radius: $border-radius-default;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &--rel {
+      margin-left: 20px;
+    }
+
+    &:hover {
+      background-color: #f5f3f3;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      background-color: $color-sys-gray;
+      cursor: no-drop;
+    }
+  }
+
+  &__Load,
+  &__Review {
+    height: 41px;
+    border: 1px solid #ccc;
+    background-color: $color-background;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      color: $color-background;
+      background-color: #000;
+      border: 1px solid #000;
+    }
+  }
+
+  &__Wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__LoadWrap {
+    position: absolute;
+    z-index: 5;
+    right: -130px;
+    top: 0;
+  }
+
+  &__Img {
+    height: 200px;
+    width: 100px;
+    object-fit: cover;
+    object-position: center;
+
+    &--preview {
+      box-sizing: border-box;
+      border: 2px solid rgb(0, 0, 0);
+    }
+  }
+
+  &__List {
+    display: flex;
+    list-style-type: none;
+    position: absolute;
+    bottom: 0;
+  }
+
+  &__Item {
+    margin-right: 15px;
+    position: relative;
+    cursor: pointer;
+    width: 108px;
+    height: 135px;
+
+    &--preview {
+      &::after {
+        content: "Главная";
+        position: absolute;
+        width: 100%;
+        height: 22px;
+        background-color: $color-primary;
+        border-radius: 0 0 10px 10px;
+        color: $color-background;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 22px;
+        bottom: 0;
+        left: 0;
+        font-size: 9px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__Delete {
+    opacity: 0.6;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 15;
+    transition: all 0.3s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__DeleteImage {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 10px;
+    height: 10px;
+    font-size: $fz_13;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: rgb(172, 5, 5);
+    opacity: 0;
+    transition: all 0.5s;
+  }
+
+  &__OptionLoad {
+    background-color: $color-background;
+    border: 1px solid black;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: -250px;
+    z-index: 6;
+
+    &:hover {
+      background-color: #000;
+      color: $color-background;
+    }
+  }
+
+  &__Custom {
+    position: relative;
+    width: $input-width;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 2.6rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    color: rgb(235, 229, 229);
+    background-color: $color-background;
+    border: 1px solid $color-sys-gray;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: $border-radius-default;
+    transition: all 0.3s;
+
+    &--error {
+      border: 1px solid $color-error;
+      box-sizing: border-box;
+    }
+
+    &--success {
+      border: 1px solid $color-success;
+      box-sizing: border-box;
+    }
+
+    &::before {
+      content: "Обзор";
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      height: 37px;
+      padding: 0 1rem;
+      font-weight: 300;
+      color: $color-text-light;
+      background-color: $color-sys-gray;
+      box-sizing: border-box;
+      transition: all 0.3s;
+      border-radius: 9px;
+    }
+
+    &::after {
+      content: attr(data-title);
+      color: $color-main-gray;
+      font-size: 14px;
+    }
+
+    &:hover::before {
+      color: rgb(170, 166, 166);
+      background-color: #f5f3f3;
+    }
+
+    &--disabled {
+      opacity: 0.5;
+      cursor: no-drop;
+    }
+  }
+}
+
+.UploadFile__Item:hover .UploadFile__DeleteImage {
+  opacity: 1;
+}

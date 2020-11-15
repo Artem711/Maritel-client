@@ -1,0 +1,35 @@
+@import "../../../styles/vars.scss";
+
+.EditingInput {
+  &__Input {
+    background: $color-background;
+    border: 1px solid $color-sys-gray;
+    box-sizing: border-box;
+    border-radius: $border-radius-default;
+    height: 40px;
+    width: $input-width;
+    box-sizing: border-box;
+    padding: 11px 16px;
+    font-size: $fz_15;
+    color: $color-text;
+    outline: none;
+    transition: all 0.3s;
+    font-family: $Roboto-ff;
+    &:focus {
+      border: 1px solid $color-client;
+    }
+
+    &--error {
+      border: 1px solid $color-error;
+    }
+
+    &--success {
+      border: 1px solid $color-success;
+    }
+
+    &::placeholder {
+      color: $color-main-gray;
+      font-size: $fz_15;
+    }
+  }
+}

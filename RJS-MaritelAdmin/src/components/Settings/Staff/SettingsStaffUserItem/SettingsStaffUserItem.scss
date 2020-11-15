@@ -1,0 +1,53 @@
+@import "../../../../styles/vars.scss";
+
+.SettingsStaffUserItem {
+  &__UserItem {
+    display: flex;
+    margin-top: 24px;
+    list-style-type: none;
+    font-family: $Roboto-ff;
+  }
+
+  &__UserName {
+    font-size: 15px;
+    color: $color-text;
+    width: 50%;
+  }
+
+  &__UserLogin {
+    width: 25%;
+  }
+
+  &__LeftSide {
+    width: $input-width;
+    display: flex;
+  }
+
+  &__RightSide {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__ImgWrap {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+
+    &--dis {
+      opacity: 0.3;
+      cursor: no-drop;
+    }
+  }
+
+  &__DelImg {
+    cursor: pointer;
+    &--dis {
+      cursor: no-drop;
+    }
+  }
+
+}

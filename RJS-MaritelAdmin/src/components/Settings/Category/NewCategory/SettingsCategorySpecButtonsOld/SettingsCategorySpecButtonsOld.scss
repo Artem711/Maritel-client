@@ -1,0 +1,46 @@
+@import "../../../../../styles/vars.scss";
+
+.SettingsCategorySpecButtonsOld {
+  &__ButtonsWrap {
+    height: 40px;
+    display: flex;
+  }
+
+  &__Button {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+  }
+
+  &__Unsave {
+    background-color: #fafafa;
+    border: 0;
+    outline: 0;
+    margin-left: 43px;
+    color: $color-error;
+    font-size: $fz_15;
+  }
+
+  &__ButtonImg {
+    margin-right: 10px;
+  }
+
+  &__Save {
+    background-color: $color-primary;
+    outline: 0;
+    border: 0;
+    border-radius: $border-radius-default;
+    font-size: $fz_15;
+    color: #fff;
+    font-family: $Roboto-ff;
+    padding: 0 29px;
+    box-sizing: border-box;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: no-drop;
+    }
+  }
+}

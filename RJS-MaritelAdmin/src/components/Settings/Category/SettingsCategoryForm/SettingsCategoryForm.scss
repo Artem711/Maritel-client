@@ -1,0 +1,53 @@
+@import "../../../../styles/vars.scss";
+.SettingsCategoryForm {
+  &__Input {
+    width: 515px;
+    height: 40px;
+    background: $color-background;
+    border: 1px solid $color-sys-gray;
+    box-sizing: border-box;
+    border-radius: $border-radius-default;
+    outline: none;
+    padding-left: 16px;
+    font-size: $fz_15;
+    font-family: $Roboto-ff;
+    color: $color-text;
+    transition: all 0.3s;
+    margin-right: 16px;
+
+    &::placeholder {
+      color: $color-main-gray;
+    }
+
+    &:focus {
+      border: 1px solid $color-primary;
+    }
+
+    &--error {
+      border: 1px solid $color-error;
+    }
+  }
+
+  &__Add {
+    height: 40px;
+    width: 101px;
+    background: $color-primary;
+    border-radius: $border-radius-default;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-family: $Roboto-ff;
+    font-size: $fz_15;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      background: $color-client;
+    }
+
+    &:disabled {
+      background: $color-primary;
+      opacity: 0.6;
+      cursor: no-drop;
+    }
+  }
+}

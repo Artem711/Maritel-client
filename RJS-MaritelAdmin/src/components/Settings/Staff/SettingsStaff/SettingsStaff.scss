@@ -1,0 +1,82 @@
+@import "../../../../styles/vars.scss";
+
+.SettingsStaff {
+  &__Wrap {
+    margin-top: 35px;
+  }
+
+  &__Form {
+    width: $input-width;
+  }
+
+  &__FieldsWrap {
+    display: grid;
+    grid-template-columns: repeat(2, 308px);
+    grid-gap: 20px 16px;
+  }
+
+  &__AddButton {
+    margin-top: 20px;
+    width: 100%;
+    background-color: $color-primary;
+    height: 40px;
+    border-radius: 10px;
+    outline: 0;
+    border: 0;
+    color: #fff;
+    font-family: $Roboto-ff;
+    transition: all 0.3s;
+    font-size: 15px;
+    cursor: pointer;
+    &:hover {
+      background-color: $color-client;
+    }
+  }
+
+  &__UsersInformation {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+  }
+
+  &__UsersInfo {
+    width: $input-width;
+  }
+
+  &__InfoTitle {
+    font-size: 18px;
+    color: #c4c4c4;
+    font-family: "Cera";
+    font-weight: bold;
+
+    &--left {
+      padding-left: 27px;
+    }
+  }
+
+  &__Description {
+    margin-top: 25px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__DescriptionText {
+    color: $color-text;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Cera";
+    width: 122px;
+    text-align: center;
+
+    &--left {
+      text-align: start;
+    }
+  }
+
+  &__RightsDescr {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+  }
+}

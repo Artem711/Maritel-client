@@ -1,0 +1,28 @@
+@import "../../../../styles/vars.scss";
+
+.SettingsStaffInput {
+  width: 308px;
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #ebebeb;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding-left: 16px;
+  font-family: $Roboto-ff;
+  font-size: $fz-15;
+  color: $color-text;
+  transition: all 0.3s;
+  outline: 0;
+
+  &::placeholder {
+    color: #c4c4c4;
+  }
+
+  &:focus {
+    border: 1px solid $color-primary;
+  }
+
+  &--err {
+    border: 1px solid $color-error;
+  }
+}

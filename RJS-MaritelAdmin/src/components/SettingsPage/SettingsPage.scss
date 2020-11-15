@@ -1,0 +1,44 @@
+@import "../../styles/vars.scss";
+
+.SettingsPage {
+  &__Settings {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 266px);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 62px;
+  }
+
+  &__Link {
+    display: flex;
+    width: 266px;
+    height: 62px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 63px;
+    box-sizing: border-box;
+    background: $color-sys-gray;
+    border-radius: $border-radius-default;
+    margin-bottom: 18px;
+    text-decoration: none;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $color-main-gray;
+    }
+  }
+
+  &__Name {
+    color: $color-text;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: $Cera-ff;
+  }
+
+  &__Img {
+    margin-right: 16px;
+    width: 23px;
+    height: 18px;
+  }
+}

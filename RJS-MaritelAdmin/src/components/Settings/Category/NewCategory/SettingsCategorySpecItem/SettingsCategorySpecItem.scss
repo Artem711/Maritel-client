@@ -1,0 +1,77 @@
+@import "../../../../../styles/vars.scss";
+
+.SettingsCategorySpecItem {
+  &__ProductItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 14px;
+    cursor: pointer;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: $color-sys-gray;
+      bottom: 0;
+      transition: all 0.3s;
+    }
+
+    &:hover::after {
+      background-color: $color-primary;
+    }
+  }
+
+  &__LeftSide {
+    display: flex;
+    align-items: center;
+  }
+
+  &__ProductImg {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin-right: 21px;
+  }
+
+  &__ProductTitle {
+    font-style: normal;
+    font-weight: bold;
+    font-size: $fz_15;
+    color: $color-text;
+    margin-bottom: 4px;
+    transition: all 0.3s;
+  }
+
+  &__ProductType {
+    font-size: $fz_13;
+    color: $color-text-light;
+  }
+
+  &__RightSide {
+    width: 93px;
+    height: 30px;
+    background: $color-sys-gray;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    transition: all 0.3s;
+
+    &--checked {
+      background-color: $color-primary;
+    }
+  }
+
+  &__Status {
+    font-family: $Roboto-ff;
+    font-weight: bold;
+    font-size: 10px;
+    color: $color-background;
+  }
+}

@@ -1,0 +1,113 @@
+@import "../../../styles/vars.scss";
+
+.ProductPagePhotos {
+  &__Photos {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 990px) {
+      margin-top: 10px;
+      flex-direction: row;
+    }
+  }
+
+  &__PhotosWrap {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 74px 1fr;
+    grid-column-gap: 30px;
+
+    @media screen and (max-width: 990px) {
+      margin-top: 16px;
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__GeneralImg {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    display: none;
+    &--loaded {
+      display: block;
+    }
+    @media screen and (min-width: 1441px) {
+      height: 580px;
+      width: calc(580px * 0.75);
+      max-width: 100%;
+    }
+
+    @media screen and (max-width: 1441px) {
+      height: 615px;
+      width: calc(615px * 0.75);
+      max-width: 100%;
+    }
+
+    @media screen and (max-width: 990px) {
+      width: 100%;
+      height: calc(100% * 0.75);
+    }
+
+    &--popup {
+      @media screen and (max-width: 1441px) {
+        height: 515px;
+        width: calc(515px * 0.75);
+        max-width: 100%;
+      }
+
+      @media screen and (max-width: 1300px) {
+        height: 465px;
+        width: calc(465px * 0.75);
+        max-width: 100%;
+      }
+
+      @media screen and (max-width: 1150px) {
+        height: 365px;
+        width: calc(365px * 0.75);
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__GeneralContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    @media screen and (max-width: 990px) {
+      min-height: 300px;
+    }
+  }
+
+  &__Slider {
+    position: absolute;
+    width: 32px;
+    height: 62px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #bb2a36;
+    border: 0;
+    outline: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__SliderBack {
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+  &__SliderNext {
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+
+  &__SliderImgNext {
+    transform: matrix(0, 1, 1, 0, 0, 0);
+    transform: rotate(180deg);
+  }
+}

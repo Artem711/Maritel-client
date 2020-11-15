@@ -1,0 +1,59 @@
+@import "../../../styles/vars.scss";
+
+.SettingsServices {
+  &__MoySklad {
+    margin-top: 35px;
+  }
+
+  &__Title {
+    margin-bottom: 20px;
+    font-family: $Cera-ff;
+    font-size: 18px;
+    color: $color-text;
+    font-weight: bold;
+  }
+
+  &__Inp {
+    width: 632px;
+    height: 40px;
+    background: $color-background;
+    border: 1px solid $color-sys-gray;
+    box-sizing: border-box;
+    border-radius: $border-radius-default;
+    margin-bottom: 20px;
+    padding-left: 16px;
+    font-size: $fz_15;
+    color: $color-text;
+    outline: 0;
+    transition: all 0.3s;
+
+    &::placeholder {
+      color: $color-main-gray;
+    }
+
+    &:focus {
+      border: 1px solid $color-primary;
+    }
+
+    &--success {
+      border: 1px solid $color-success;
+    }
+
+    &--error {
+      border: 1px solid $color-error;
+    }
+  }
+
+  &__Status {
+    font-size: $fz_15;
+    font-weight: 500;
+
+    &--success {
+      color: $color-success;
+    }
+
+    &--error {
+      color: $color-error;
+    }
+  }
+}

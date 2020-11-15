@@ -1,0 +1,75 @@
+@import "../../../styles/vars.scss";
+
+.ProdSett {
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  align-items: center;
+
+  &__LeftSide {
+    padding-left: 16px;
+  }
+
+  &__AddProd {
+    display: flex;
+    align-items: center;
+    color: $color-primary;
+    font-size: $fz_15;
+    font-family: $Roboto-ff;
+  }
+
+  &__CheckedParam {
+    display: flex;
+  }
+
+  &__Param {
+    font-size: $fz_15;
+    color: $color-text-light;
+
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.3s;
+    border-radius: $border-radius-default;
+
+    &:hover {
+      background-color: $color-sys-gray;
+    }
+
+    &--delete {
+      color: $color-error;
+      opacity: 0.6;
+
+      &:hover {
+        background-color: #fdc5c2;
+      }
+    }
+
+    &--dis {
+      opacity: 0.6;
+      &:hover {
+        cursor: no-drop;
+        background-color: #fafafa;
+      }
+    }
+  }
+
+  &__ParamImg {
+    margin-right: 10px;
+  }
+
+  &__AddProdImg {
+    margin-right: 10px;
+  }
+
+  &__AddLink {
+    text-decoration: none;
+  }
+
+  &__RightSide {
+    display: flex;
+  }
+}

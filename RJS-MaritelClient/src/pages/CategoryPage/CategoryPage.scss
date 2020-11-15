@@ -1,0 +1,74 @@
+@import "../../styles/vars.scss";
+
+.CategoryPage {
+  &__Wrap {
+    padding: 0 3rem;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media screen and (max-width: 1024px) {
+      padding: 0 2rem;
+    }
+    @media screen and (max-width: 414px) {
+      padding: 0 16px;
+    }
+  }
+  &__List {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 20px;
+    margin-bottom: 5rem;
+  }
+
+  &__Title {
+    margin: 5rem 0 2rem;
+    font-weight: 800;
+    font-size: 2rem;
+    letter-spacing: 0.08em;
+    color: $main-color;
+    text-transform: uppercase;
+  }
+
+  &__Item {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__Img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__Name {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2rem;
+    height: 4.5rem;
+    width: 80%;
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    color: $main-color;
+    font-weight: 800;
+    transition: all 0.3s;
+  }
+}
+
+.CategoryPage__Item:hover .CategoryPage__Name {
+  background-color: $main-color;
+  color: #fff;
+}

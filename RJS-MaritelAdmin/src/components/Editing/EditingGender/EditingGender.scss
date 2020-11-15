@@ -1,0 +1,88 @@
+@import "../../../styles/vars.scss";
+
+.EditingGender {
+  margin-top: 20px;
+  height: 40px;
+  &__Main {
+    width: $input-width;
+    height: 40px;
+    box-sizing: border-box;
+    background: $color-background;
+    border: 1px solid $color-sys-gray;
+    box-sizing: border-box;
+    font-family: $Roboto-ff;
+    border-radius: $border-radius-default;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &--open {
+      border-radius: 10px 10px 0 0;
+      border-bottom: 1px solid $color-background;
+    }
+
+    &--success {
+      border: 1px solid $color-success;
+    }
+
+    &--error {
+      border: 1px solid $color-error;
+    }
+  }
+
+  &__Arrow {
+    transition: all 0.3s;
+    &--down {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__MainText {
+    color: $color-text;
+    font-size: $fz_15;
+
+    &--default {
+      color: $color-text-light;
+    }
+  }
+
+  &__List {
+    width: $input-width;
+    list-style-type: none;
+    background-color: $color-background;
+    border: 1px solid $color-sys-gray;
+    border-top: 1px solid $color-background;
+    transform: translateY(-30px);
+    box-sizing: border-box;
+    border-radius: 0 0 10px 10px;
+    padding-bottom: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s;
+    z-index: -1;
+
+    &--open {
+      position: absolute;
+      z-index: 16;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(-3px);
+    }
+  }
+
+  &__Item {
+    padding-left: 16px;
+    box-sizing: border-box;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $color-sys-gray;
+    }
+  }
+}

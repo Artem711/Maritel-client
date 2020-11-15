@@ -1,0 +1,86 @@
+@import "../../styles/vars.scss";
+
+.LoginPage {
+  margin: 161px auto 0;
+  width: 306px;
+  font-family: $Cera-ff;
+
+  &__Title {
+    font-size: 26px;
+    color: $color-text;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__Form {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  &__Input {
+    border: 1px solid $color-sys-gray;
+    box-sizing: border-box;
+    border-radius: $border-radius-default;
+    height: 49px;
+    margin-bottom: 22px;
+    padding-left: 16px;
+    transition: all 0.3s;
+    font-size: $fz_15;
+
+    &::placeholder {
+      font-family: $Roboto-ff;
+      font-size: $fz_15;
+      color: $color-text-light;
+    }
+
+    &:focus {
+      border: 1px solid $color-client;
+      outline: 0;
+    }
+
+    &--error {
+      border: 1px solid $color-error;
+    }
+  }
+
+  &__Login {
+    font-family: $Roboto-ff;
+    font-size: $fz_15;
+    color: $color-background;
+    height: 49px;
+    background: $color-primary;
+    border-radius: $border-radius-default;
+    border: 0;
+    outline: 0;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin-bottom: 20px;
+
+    &:hover {
+      background: #2776e4;
+    }
+
+    &:disabled {
+      background-color: #91c1f8;
+      cursor: no-drop;
+    }
+  }
+
+  &__Error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $Roboto-ff;
+    font-size: $fz_15;
+    color: $color-error;
+  }
+
+  &__ErrorImg {
+    width: $fz_15;
+    height: $fz_15;
+    margin-right: 8px;
+  }
+}
